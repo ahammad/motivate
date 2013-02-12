@@ -1,0 +1,13 @@
+{% load url from future %}
+{% if quotes_list %}
+    <ul>
+    {% for quote in quotes_list %}
+        <li>{{ quote.quotation }}
+        	<p>-{{quote.author.name}}</p>
+
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No quotes are available.</p>
+{% endif %}
